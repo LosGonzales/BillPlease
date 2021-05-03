@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/loginHeader"
+            android:text="@string/app_name"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:textSize="36sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            >
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint = "@string/amount"
+                style="@style/modifiedEditText"
+                android:id="@+id/inputAmount" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            >
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/pax"
+                style="@style/modifiedEditText"
+                android:id="@+id/inputPax" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+        <ToggleButton
+                android:text="ToggleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/toggleSvs"
+                style="@style/toggleButton"
+                android:layout_weight="1"
+                android:textOff="@string/no_svs"
+                android:textOn="@string/svs"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"/>
+
+        <ToggleButton
+                android:text="ToggleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/toggleGst"
+                style="@style/toggleButton"
+                android:layout_weight="1"
+                android:textOff="@string/no_gst"
+                android:textOn="@string/gst"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            >
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                style="@style/modifiedEditText"
+                android:hint="@string/discount"
+                android:id="@+id/inputDiscount" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_width="0dp"
+                android:clickable="false"
+                android:enabled="false"
+                android:layout_weight="1">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:clickable="false"
+                    android:enabled="false"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/via" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+        <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:id="@+id/radioGroup"
+                android:gravity="center_vertical"
+                android:layout_weight="10">
+
+            <RadioButton
+                    android:text="@string/cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioCash"
+                    android:checked="true"
+                    android:textSize="14sp"
+                    android:textColor="#9E9E9E"
+                    android:buttonTint="@color/colorPrimary"
+                    android:layout_gravity="bottom" />
+
+            <RadioButton
+                    android:text="@string/paynow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioPayNow"
+                    android:textColor="#9E9E9E"
+                    android:buttonTint="@color/colorPrimary"
+                    android:layout_gravity="bottom" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_weight="1">
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSplit"
+                    android:text="@string/split"
+                    style="@style/loginButton"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp" />
+
+            <Button
+                    android:text="@string/reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonReset"
+                    style="@style/loginButton"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:text="@string/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/loginHeader"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:id="@+id/textBill" />
+
+                <TextView
+                        android:text="@string/_0_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/loginHeader"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:id="@+id/textTotal"
+                        android:paddingTop="5dp"
+                        android:gravity="right" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:text="@string/each"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/loginHeader"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:id="@+id/textEach"
+                        android:paddingTop="5dp" />
+
+                <TextView
+                        android:text="@string/_0_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/loginHeader"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:id="@+id/textPays"
+                        android:paddingTop="5dp"
+                        android:gravity="right" />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    style="@style/loginHeader"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/methodText"
+                    android:textSize="16sp"
+                    android:gravity="right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/loginHeader"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:textSize="18sp"
+            android:textColor="#BA0F0F"
+            android:id="@+id/errorText"
+            android:gravity="center" />
+
+
+</LinearLayout>
